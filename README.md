@@ -17,6 +17,7 @@ This is an example wedding website.  View a demo here.
 
 This example demonstrates how to pull the raw data from the Cosmic JS endpoint and display the objects and media.
 
+
 ### What's Next
 1. Finish the React Wedding Website
 2. Add Node w/ Express Website
