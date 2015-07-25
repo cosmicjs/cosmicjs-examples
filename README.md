@@ -3,21 +3,17 @@ A few examples of how to use Cosmic JS to add content to your site or app.  Curr
 
 All examples include the bucket data model in an exported JSON file.
 
-###PHP - Astral 
-
-####[Demo](http://tonyspiro.com/dev/cosmicjs-examples/php/astral/)
+###PHP - Astral - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/php/astral/)
 
 This example includes a really cool frontend crafted by [@n33co](http://twitter.com/n33co) at [HTML5UP.net](http://html5up.net).
 
 
-###Angular - Wedding Website 
-
-####[Demo](http://tonyspiro.com/dev/cosmicjs-examples/angular/wedding-website/)
+###Angular - Wedding Website - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/angular/wedding-website/)
 
 This is an example wedding website.  View a demo here.
 
 
-###React - Wedding Website (Unfinished) [Demo](http://tonyspiro.com/dev/cosmicjs-examples/react/wedding-website/)
+###React - Wedding Website (Unfinished) - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/react/wedding-website/)
 
 This example demonstrates how to pull the raw data from the Cosmic JS endpoint and display the objects and media.
 
