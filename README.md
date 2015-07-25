@@ -6,7 +6,7 @@ All examples include the bucket data model in an exported JSON file.
 ###PHP - Astral
 
 [Demo](http://tonyspiro.com/dev/cosmicjs-examples/php/astral/)
-This example includes a really cool frontend crafted by [@n33o](http://twitter.com/n33o) at [HTML5UP.net](http://html5up.net].
+This example includes a really cool frontend crafted by [@n33co](http://twitter.com/n33co) at [HTML5UP.net](http://html5up.net).
 
 ###Angular - Wedding Website
 
