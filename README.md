@@ -8,7 +8,7 @@ This example includes a really cool frontend crafted by [@n33co](http://twitter.
 
 ###Angular - Wedding Website - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/angular/wedding-website/)
 
-This is an example wedding website.  View a demo here.
+This is an example wedding website.
 
 
 ###React - Wedding Website (Unfinished) - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/react/wedding-website/)
