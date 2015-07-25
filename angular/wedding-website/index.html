@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cosmicApp" ng-controller="mainController">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ section.global['description'] }}">
+  <meta name="author" content="{{ section.global['author'] }}">
+
+  <title>{{ section.global['site-title'] }}</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Fonts -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="http://fonts.googleapis.com/css?family=Poiret+One|Open+Sans|Lato|Sacramento" rel="stylesheet" type="text/css">
+  <!-- Custom Theme CSS -->
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/modernizer.js"></script>
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar-custom" ng-cloak class="ng-cloak">
+
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" data-go-to="" href="#home">
+          <span class="light">{{ section.global['menu-title'] }}</span>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden">
+            <a data-go-to="" href="#home"></a>
+          </li>
+          <li ng-repeat="item in section['main-menu'].metafields" class="page-scroll">
+            <a href="#{{ item.key }}" data-go-to="">{{ item.title }}</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!--[if lte IE 8]>
+      <p class="browsehappy">
+      We, as a couple, are excited about the future and our wedding website does not support your <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a>.
+      </p>
+  <![endif]-->
+
+  <section class="intro" style="background-image: url({{ mediaurl }}/{{ section['site-top'].hero }});">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <p class="intro-text">{{ section['site-top'].date }}</p>
+            <div class="page-scroll">
+              <a href="#our-story" data-go-to="" class="btn btn-circle">
+                <i class="fa fa-{{ section['site-top'].icon }} animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--// #intro -->
+
+  <section id="our-story" class="container content-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>{{ section['our-story'].title }}</h2>
+        <div class="content-frame" ng-bind-html="renderHtml(section['our-story'].content)">{{ section['our-story'].content }}</div>
+      </div>
+    </div>
+  </section><!--// #our-story -->
+
+  <section id="our-big-day" class="content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>{{ section['our-big-day'].title }}</h2>
+          <div class="content-frame">
+            <div class="venue-info">
+              <div class="col-sm-12"><h4 ng-bind-html="renderHtml(section['our-big-day']['venue-title'])">{{ section['our-big-day']['venue-title'] }}</h4></div>
+              <div class="col-sm-6">
+                <img class="venue-pic" ng-src="{{ mediaurl }}/{{ section['our-big-day']['venue-image'] }}" />
+              </div>
+              <div class="col-sm-6" ng-bind-html="renderHtml(section['our-big-day']['the-venue'])">{{ section['our-big-day']['the-venue'] }}</div>
+              <div class="clearfix"></div>
+            </div><!-- // .venue-info -->
+            <div class="clearfix"></div>
+            <div class="venue-info" id="accomodations">
+              <div class="col-sm-12"><h4 ng-bind-html="renderHtml(section['our-big-day']['accommodations-title'])">{{ section['our-big-day']['accommodations-title'] }}</h4></div>
+              <div class="col-sm-6">
+                <img class="venue-pic" ng-src="{{ mediaurl }}/{{ section['our-big-day']['hotel-image'] }}" />
+              </div>
+              <div class="col-sm-6" ng-bind-html="renderHtml(section['our-big-day']['accomodations'])">{{ section['our-big-day']['accomodations'] }}</div>
+              <div class="clearfix"></div>
+            </div><!-- // .venue-info -->
+            <div class="clearfix"></div>
+            <div class="col-sm-12 text-left party-people">
+              <div class="col-sm-4">
+                <h4 ng-bind-html="renderHtml(section['our-big-day']['brides-party-title'])">{{ section['our-big-day']['brides-party-title'] }}</h4>
+              </div>
+              <div class="col-sm-4" ng-repeat="bridesmaid in bridesmaids">
+                <img ng-src="{{ mediaurl }}/{{ bridesmaid.image }}" />
+                <div class="text-center title"><br />{{ bridesmaid.title }}<br />{{ bridesmaid['official-title'] }}</div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-sm-4">
+                <h4 ng-bind-html="renderHtml(section['our-big-day']['grooms-party-title'])">{{ section['our-big-day']['grooms-party-title'] }}</h4>
+              </div>
+              <div class="col-sm-4" ng-repeat="groomsman in groomsmen">
+                <img ng-src="{{ mediaurl }}/{{ groomsman.image }}" />
+                <div class="text-center title"><br />{{ groomsman.title }}<br />{{ groomsman['official-title'] }}</div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="col-sm-6" ng-bind-html="section['our-big-day']['content1']">{{ section['our-big-day']['the-wedding-party'] }}</div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden" id="venueinfo" data-address="{{ section['map']['venue-address'] }}">
+      <a href="https://www.google.com/maps/preview?ie=UTF-8&fb=1&gl=us&q={{ section['map']['venue-address'] }}" 
+      target="_blank" ng-bind-html="renderHtml(section['map']['venue-address'])">{{ section['map']['venue-address'] }}</a>
+    </div>
+    <div id="map"></div>
+  </section><!--// #our-big-day -->
+
+  <section id="registry" class="container content-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>{{ section['registry'].title }}</h2>
+        <div class="content-frame">
+          <div class="registry-content" ng-bind-html="renderHtml(section['registry'].content)">{{ section['registry'].content }}</div>
+          <div class="col-sm-4" ng-repeat="store in section['registry'].metafields">
+            <a target="_blank" href="{{ store.value }}" class="btn btn-default btn-lg col-sm-12"><span class="network-name">{{ store.title }}</span></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </section><!--// #registry -->
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="col-sm-12" ng-bind-html="renderHtml(section.global['footer-text'])">
+        {{ section.global['footer-text'] }}
+      </div>
+      <br><br>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+  <!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+  <script src="js/infobox.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- JS (load angular, ui-router, and our custom js file) -->
+  <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+  <!-- Angular Javascript -->
+  <script src="app.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47527341-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
