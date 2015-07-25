@@ -132,7 +132,7 @@ include("cosmicjs-driver/cosmic.php");
 						<ul class="icons">
 							<li><a href="<?php echo $cosmic['social']->metafield['github']; ?>" class="icon fa-github"><span class="label">Github</span></a></li>
 							<li><a href="<?php echo $cosmic['social']->metafield['twitter']; ?>" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="<?php echo $cosmic['social']->metafield['email']; ?>" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="mailto:<?php echo $cosmic['social']->metafield['email']; ?>" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; <?php echo date("Y"); ?> <a href="https://cosmicjs.com"><?php echo $cosmic['header-footer']->metafield['copyright']; ?></a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
