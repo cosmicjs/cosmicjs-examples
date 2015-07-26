@@ -1,3 +1,4 @@
+[![Cosmic JS Logo](https://cosmicjs.com/images/marketing/logo-w-brand.jpg)](https://cosmicjs.com/)
 ##Cosmic JS Examples
 A few examples of how to use Cosmic JS to add content to your site or app.  Currently, there is an example for each of the following languages: PHP, Angular and React.
 
