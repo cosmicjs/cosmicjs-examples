@@ -9,4 +9,5 @@ $config->objects_url = $config->url . "/objects";
 $config->media_url = $config->url . "/media";
 $config->add_object_url = $config->url . "/add-object";
 $config->edit_object_url = $config->url . "/edit-object";
+$config->file_url = "https://cosmicjs.com/uploads";
 ?>
