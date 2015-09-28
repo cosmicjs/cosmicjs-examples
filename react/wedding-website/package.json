@@ -1,0 +1,31 @@
+{
+  "name": "wedding-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "babelify": "^6.3.0",
+    "events": "^1.0.2",
+    "browserify": "^11.2.0",
+    "gulp-rename": "^1.2.2",
+    "cosmicjs-browser": "^1.2.1",
+    "lodash": "^3.10.1",
+    "react": "^0.13.3",
+    "flux": "^2.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "run-sequence": "^1.1.4",
+    "gulp": "^3.9.0",
+    "gulp-uglify": "^1.4.1",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cosmicjs/cosmicjs-examples/tree/master/react/wedding-website"
+  },
+  "author": "Tony Spiro <tspiro@tonyspiro.com> (http://tonyspiro.com/)",
+  "license": "ISC"
+}
