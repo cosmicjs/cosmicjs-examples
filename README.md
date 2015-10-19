@@ -12,11 +12,5 @@ This example includes a really cool frontend crafted by [@n33co](http://twitter.
 This is an example wedding website.
 
 
-###React - Wedding Website (Unfinished) - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/react/wedding-website/)
-
-This example demonstrates how to pull the raw data from the Cosmic JS endpoint and display the objects and media.
-
-
-### What's Next
-1. Finish the React Wedding Website
-2. Add Node w/ Express Website
+###React - Blog - [Demo](http://spyrocklabs.com:8000)
+This app demonstrates how to build a portfolio blog using React on the Cosmic JS content platform. Uses React Router, Flux and Cosmic JS to load pages fast in a single page application.
