@@ -1,6 +1,6 @@
 [![Cosmic JS Logo](https://cosmicjs.com/images/marketing/logo-w-brand.jpg)](https://cosmicjs.com/)
 ##Cosmic JS Examples
-A few examples of how to use Cosmic JS to add content to your site or app.  Currently, there is an example for each of the following languages: PHP, Angular and React.
+A few examples of how to use Cosmic JS to add content to your site or app.  Currently, there is an example for each of the following languages: React, PHP and Angular.
 
 ###React - Blog - [Demo](http://spyrocklabs.com:8000)
 This app demonstrates how to build a portfolio blog using React on the Cosmic JS content platform. Uses React Router, Flux and Cosmic JS to load pages fast in a single page application.
