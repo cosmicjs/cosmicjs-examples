@@ -1,4 +1,5 @@
-#PHP Single Page Site
+#Astral
+###PHP Single Page Site
 
 ####Get Started
 In config.php set your bucket slug:
