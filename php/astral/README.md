@@ -2,7 +2,7 @@
 ###PHP Single Page Site
 
 ####Get Started
-In config.php set your bucket slug:
+In ```config.php``` set your bucket slug:
 ```
 $config = new stdClass();
 $config->bucket_slug = "astral"; // bucket slug
