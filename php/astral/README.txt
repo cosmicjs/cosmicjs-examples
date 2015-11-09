@@ -1,6 +1,6 @@
-# PHP Single Page Site
+#PHP Single Page Site
 
-#### Get Started
+####Get Started
 In config.php set your bucket slug:
 ```
 $config = new stdClass();
