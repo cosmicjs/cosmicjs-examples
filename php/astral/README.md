@@ -11,6 +11,7 @@ $config->write_key = ""; // leave empty if not required
 ```
 
 Set up your local server by running [PHP's built-in web server](http://php.net/manual/en/features.commandline.webserver.php).  Run the following commands in your terminal:
+
 ``cd astral
 php -S localhost:8000```
 
