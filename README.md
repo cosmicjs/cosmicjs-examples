@@ -2,8 +2,8 @@
 ##Cosmic JS Examples
 A few examples of how to use Cosmic JS to add content to your site or app.  Currently, there is an example for each of the following languages: React, PHP and Angular.
 
-###React - Blog - [Demo](https://github.com/tonyspiro/tonyspiro.com-react)
-This app demonstrates how to build a portfolio blog using React on the Cosmic JS content platform. Uses React Router, Flux and Cosmic JS to load pages fast in a single page application.
+###React - Universal Blog - [Demo](https://github.com/tonyspiro/react-universal-blog)
+The React Universal Blog is a portfolio blog app that renders html on the server to make all pages visible to search engines. Then after initial load from the server, it is converted to a single page application to allow for fast navigation between pages.
 
 ###PHP - Astral - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/php/astral/)
 
