@@ -1,6 +1,6 @@
 ##Cosmic JS Bootstrap Image Gallery
 ####Getting Started
-Check out demo.js to see how the images are being served from the Cosmic JS content platform API:
+Check out `demo.js` to see how the images are being served from the Cosmic JS content platform API:
 ```javascript
 $(function () {
     'use strict';
