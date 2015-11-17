@@ -14,3 +14,7 @@ This example includes a really cool frontend crafted by [@n33co](http://twitter.
 
 This is an example wedding website.
 
+###Bootstrap Image Gallery - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/cosmicjs-image-gallery/)
+
+This is a demo image gallery built using the [Bootstrap Image Gallery by blueimp](https://github.com/blueimp/Bootstrap-Image-Gallery).  The images are provided via the Cosmic JS content platform API using a simple ajax call.
+
