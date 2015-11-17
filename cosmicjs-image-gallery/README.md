@@ -14,7 +14,6 @@ $(function () {
         $.each(result.objects, function (index, photo) {
             url = 'https://cosmicjs.com/uploads/' + photo.metafields[0].value + '?dim=400';
             var url_big = 'https://cosmicjs.com/uploads/' + photo.metafields[0].value;
-            console.log(url);
             $('<a/>')
                 .append($('<div style="display: inline-block; width: 200px; height: 150px; background-image: url(' + url + '); background-size: cover; background-position: center center;"/>'))
                 .prop('href', url_big)
