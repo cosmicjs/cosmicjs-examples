@@ -1,110 +1,43 @@
-# Bootstrap Image Gallery
+# Cosmic JS Bootstrap Image Gallery
+##Getting Started
+Checkout demo.js to see how the images are being served from the Cosmic JS content platform API:
+```javascript
+$(function () {
+    'use strict';
+    var api_url = 'https://api.cosmicjs.com/v1/cosmic-js-image-gallery/object-type/gallery';
 
-- [Demo](#demo)
-- [Description](#description)
-- [Setup](#setup)
-- [Documentation](#documentation)
-- [Extras](#extras)
-- [Requirements](#requirements)
-- [License](#license)
+    // Load demo images from flickr:
+    $.getJSON(api_url).done(function (result) {
+        var linksContainer = $('#links'),
+            url;
+        // Add the demo images as links with thumbnails to the page:
+        $.each(result.objects, function (index, photo) {
+            url = 'https://cosmicjs.com/uploads/' + photo.metafields[0].value + '?dim=400';
+            var url_big = 'https://cosmicjs.com/uploads/' + photo.metafields[0].value;
+            console.log(url);
+            $('<a/>')
+                .append($('<div style="display: inline-block; width: 200px; height: 150px; background-image: url(' + url + '); background-size: cover; background-position: center center;"/>'))
+                .prop('href', url_big)
+                .prop('title', photo.title)
+                .attr('data-gallery', '')
+                .appendTo(linksContainer);
+        });
+    });
 
-## Demo
-[Bootstrap Image Gallery Demo](https://blueimp.github.io/Bootstrap-Image-Gallery/)
+    $('#borderless-checkbox').on('change', function () {
+        var borderless = $(this).is(':checked');
+        $('#blueimp-gallery').data('useBootstrapModal', !borderless);
+        $('#blueimp-gallery').toggleClass('blueimp-gallery-controls', borderless);
+    });
 
-## Description
-Bootstrap Image Gallery is an extension to [blueimp Gallery](https://blueimp.github.io/Gallery/), a touch-enabled, responsive and customizable image &amp; video gallery.  
-It displays images and videos in the modal dialog of the [Bootstrap](http://getbootstrap.com/) framework, features swipe, mouse and keyboard navigation, transition effects, fullscreen support and on-demand content loading and can be extended to display additional content types.
+    $('#fullscreen-checkbox').on('change', function () {
+        $('#blueimp-gallery').data('fullScreen', $(this).is(':checked'));
+    });
 
-## Setup
-Copy the **css**, **img** and **js** directories to your website.
+    $('#image-gallery-button').on('click', function (event) {
+        event.preventDefault();
+        blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
+    });
 
-Add the following HTML snippet to the head section of your webpage:
-
-```html
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+});
 ```
-
-Add the following HTML snippet with the Gallery widget to the body of your webpage:
-
-```html
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->
-    <div class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
-                </div>
-                <div class="modal-body next"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-Include the following scripts at the bottom of the body of your webpage:
-
-```html
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<script src="js/bootstrap-image-gallery.min.js"></script>
-```
-
-Create a list of links to image files with the attribute **data-gallery** (optionally with enclosed thumbnails) and add them to the body of your webpage:
-
-```html
-<div id="links">
-    <a href="images/banana.jpg" title="Banana" data-gallery>
-        <img src="images/thumbnails/banana.jpg" alt="Banana">
-    </a>
-    <a href="images/apple.jpg" title="Apple" data-gallery>
-        <img src="images/thumbnails/apple.jpg" alt="Apple">
-    </a>
-    <a href="images/orange.jpg" title="Orange" data-gallery>
-        <img src="images/thumbnails/orange.jpg" alt="Orange">
-    </a>
-</div>
-```
-
-## Documentation
-For information regarding Keyboard shortcuts, Gallery Options, API methods, Video Gallery setup, Gallery extensions and Browser support, please refer to the [blueimp Gallery documentation](https://github.com/blueimp/Gallery/blob/master/README.md).
-
-## Extras
-Bootstrap Image Gallery provides the additional `useBootstrapModal` option, which enables the original borderless layout as seen in the demo. The easiest way to enable this option is to adjust the lightbox container and set the `data-use-bootstrap-modal` attribute to `false`:
-
-```html
-<div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
-<!-- ... -->
-</div>
-```
-
-## Requirements
-* [jQuery](https://jquery.com/) v. 1.9.0+
-* [Bootstrap](http://getbootstrap.com/) v. 3.0.0+
-* [blueimp Gallery](https://github.com/blueimp/Gallery) v. 2.12.0+
-
-## License
-Released under the [MIT license](http://www.opensource.org/licenses/MIT).
