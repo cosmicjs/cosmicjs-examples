@@ -1,4 +1,7 @@
-##Cosmic JS Bootstrap Image Gallery
+##Cosmic JS Bootstrap Image Gallery - [Demo](http://tonyspiro.com/dev/cosmicjs-examples/cosmicjs-image-gallery/)
+
+This is a demo image gallery built using the [Bootstrap Image Gallery by blueimp](https://github.com/blueimp/Bootstrap-Image-Gallery).  The images are provided via the Cosmic JS content platform API using a simple ajax call.
+
 ####Getting Started
 Check out `js/demo.js` to see how the images are being served from the Cosmic JS content platform API:
 ```javascript
