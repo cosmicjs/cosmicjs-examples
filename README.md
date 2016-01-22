@@ -1,5 +1,5 @@
 [![Cosmic JS Logo](https://cosmicjs.com/images/marketing/logo-w-brand.jpg)](https://cosmicjs.com/)
-##Cosmic JS Examples
+===
 A few examples of how to use Cosmic JS to add content to your site or app.
 
 ####React - Universal Blog - [Demo](https://github.com/tonyspiro/react-universal-blog)
