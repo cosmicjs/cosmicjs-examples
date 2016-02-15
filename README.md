@@ -1,6 +1,6 @@
 Permanently Moved
 ===
-These examples website now have their own repos:
+These examples websites now have their own repos:
 
 ####[React Universal Blog](https://github.com/cosmicjs/cosmicapp-react-universal-blog) - React
 ####[Astral](https://github.com/cosmicjs/cosmicapp-astral) - PHP
